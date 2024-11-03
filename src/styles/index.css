@@ -1,19 +1,9 @@
-body {
-    background-color: rgb(237, 245, 243);
-}
-
-ul {
-    background-color: rgb(245, 250, 248);
-    list-style-type: none;
-    opacity: 0.7;
-    -webkit-box-shadow: 0px 4px 11px 2px rgba(157,166,162,0.57);
-    -moz-box-shadow: 0px 4px 11px 2px rgba(157,166,162,0.57);
-    box-shadow: 0px 4px 11px 2px rgba(157,166,162,0.57);
+li {
+    border-color: rgba(29, 29, 41, 0.2);
 }
 
 input {
     outline: none;
-    background-color: rgb(245, 250, 248);
 }
 
 h1 {
@@ -21,15 +11,35 @@ h1 {
     opacity: 0.8;
 }
 
+ul{
+    width: 80%
+}
+
+.list > * {
+    list-style-type: none;
+    opacity: 0.7;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    font-size: 20px;
+}
+
 li:hover > * {
     visibility: visible;
 }
 
+.list {
+    width:40%
+}
 .oculto {
     visibility: hidden;
 }
 
 .small {
     font-size: 12px;
-    opacity: 0.8;
+}
+.marco1 {
+    width: 77%
+}
+
+.marco2 {
+    width: 73%
 }

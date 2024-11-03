@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const urlbase = "https://playground.4geeks.com/todo/";
-//create your first component
+
 const Home = () => {
 	let [toDoList, setToDoList] = useState([])
 	const [newTask, setNewTask] = useState({
@@ -11,12 +11,12 @@ const Home = () => {
 
 	const handleChange = (event) => {
 		setNewTask({
-			...newTask, 
+			...newTask,
 			label: event.target.value
 		})
 	}
 
-	const addTask = async(event) => {
+	const addTask = async (event) => {
 		if (event.key == "Enter") {
 			try {
 				let response = await fetch(`${urlbase}todos/manu`, {
@@ -48,7 +48,7 @@ const Home = () => {
 			console.log(error);
 		}
 	}
-	
+
 	const getTasks = async () => {
 		try {
 			let response = await fetch(`${urlbase}users/manu`);
@@ -67,15 +67,15 @@ const Home = () => {
 	}, [])
 
 	return (
-		<div className="container mt-5">
-			<h1 className="text-center">todos</h1>
-			<div className="mx-auto col-5 ">
-				<ul className="p-0 my-2 ">
-					<li className="border border-bottom-0 ps-3 py-2 d-flex justify-content-between">
+		<>
+			<h1 className="text-center mt-5 ">todos</h1>
+			<div className="list container d-flex flex-column mt-2 align-items-center">
+				<ul className="p-0 my-0 align-items-center">
+					<li className="border border-bottom-0 col-12 ps-3 py-2 ">
 						<input
 							type="text"
 							placeholder="¿Que necesitas hacer?"
-							className="border-0 col-12"
+							className="border-0 me-auto"
 							value={newTask.label}
 							name="label"
 							onChange={handleChange}
@@ -86,23 +86,24 @@ const Home = () => {
 						toDoList.map((item, index) => (
 							<>
 								<li className="border border-bottom-0 ps-3 py-2 d-flex justify-content-between" key={index}>
-									{item.label} 
-									<i 
-										onClick={() => deleteTask(item.id)} 
+									{item.label}
+									<i
+										onClick={() => deleteTask(item.id)}
 										className="fa-solid fa-trash fa-sm oculto my-auto me-2">
 									</i>
 								</li>
 							</>
 						))
 					}
-					<li className="border ps-3 py-2 d-flex justify-content-between">
-						<span className="small">{(toDoList.length > 0 ? toDoList.length + " items left" : "No tasks, add a task")}</span>
+					<li className="border ps-3 py-1 d-flex justify-content-between">
+						<span class="small">{(toDoList.length > 0 ? toDoList.length + " items left" : "No tasks, add a task")}</span>
 					</li>
-				</ul>
-				
-			</div>
 
-		</div>
+				</ul>
+				<div className="marco1 pt-1 border border-top-0"></div>
+				<div className="marco2 pt-1 border border-top-0"></div>
+			</div>
+		</>
 	);
 };
 
