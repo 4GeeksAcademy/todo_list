@@ -71,7 +71,7 @@ const Home = () => {
 	}, [])
 
 	return (
-		<div className="list container d-flex flex-column mt-2 align-items-center">
+		<div className="list container d-flex col-md-5 col-10 flex-column mt-2 align-items-center">
 			<h1 className="text-center mt-5 mb-3 ">todos</h1>
 			<ul className="p-0 my-0 align-items-center">
 				<li className="border border-bottom-0 col-12 ps-3 py-2 ">

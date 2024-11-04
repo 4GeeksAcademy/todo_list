@@ -29,10 +29,6 @@ li:hover > * {
     visibility: visible;
 }
 
-.list {
-    width: 40%
-}
-
 .oculto {
     visibility: hidden;
 }
