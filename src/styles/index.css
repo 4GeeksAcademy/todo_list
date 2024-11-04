@@ -1,9 +1,11 @@
-li {
-    border-color: rgba(29, 29, 41, 0.2);
+body {
+    background-color: #e9f0ed;
 }
 
 input {
     outline: none;
+    background-color: #f5faf8;
+
 }
 
 h1 {
@@ -11,24 +13,26 @@ h1 {
     opacity: 0.8;
 }
 
-ul{
-    width: 80%
+ul {
+    width: 80%;
+    background-color: #f5faf8;
+    opacity: 0.8;
 }
 
-.list > * {
+.list>* {
     list-style-type: none;
-    opacity: 0.7;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     font-size: 20px;
 }
 
-li:hover > * {
+li:hover>* {
     visibility: visible;
 }
 
 .list {
-    width:40%
+    width: 40%
 }
+
 .oculto {
     visibility: hidden;
 }
@@ -36,6 +40,7 @@ li:hover > * {
 .small {
     font-size: 12px;
 }
+
 .marco1 {
     width: 77%
 }

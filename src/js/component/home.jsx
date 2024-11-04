@@ -75,7 +75,7 @@ const Home = () => {
 						<input
 							type="text"
 							placeholder="¿Que necesitas hacer?"
-							className="border-0 me-auto"
+							className="border-0 col-12"
 							value={newTask.label}
 							name="label"
 							onChange={handleChange}
@@ -96,7 +96,7 @@ const Home = () => {
 						))
 					}
 					<li className="border ps-3 py-1 d-flex justify-content-between">
-						<span class="small">{(toDoList.length > 0 ? toDoList.length + " items left" : "No tasks, add a task")}</span>
+						<span className="small">{(toDoList.length > 0 ? toDoList.length + " items left" : "No tasks, add a task")}</span>
 					</li>
 
 				</ul>
