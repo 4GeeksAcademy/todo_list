@@ -2,12 +2,6 @@ body {
     background-color: #e9f0ed;
 }
 
-input {
-    outline: none;
-    background-color: #f5faf8;
-
-}
-
 h1 {
     color: rgb(46, 66, 59);
     opacity: 0.8;
@@ -16,16 +10,22 @@ h1 {
 ul {
     width: 80%;
     background-color: #f5faf8;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
-.list>* {
+input {
+    outline: none;
+    background-color: #f5faf8;
+
+}
+
+.list > ul, .list > div {
     list-style-type: none;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     font-size: 20px;
 }
 
-li:hover>* {
+li:hover > * {
     visibility: visible;
 }
 
@@ -39,6 +39,7 @@ li:hover>* {
 
 .small {
     font-size: 12px;
+    opacity: 0.8;
 }
 
 .marco1 {
